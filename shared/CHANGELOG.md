@@ -20,3 +20,17 @@
 - Required Claude to record implementation and checks in that file and Codex to review both the actual diff and log claims.
 - Added mutual evidence-based correction and protocol-repair duties; linked the rule from `AGENTS.md`, `CLAUDE.md`, README and handoff files.
 - No application implementation or production action performed.
+
+## 2026-11-11 — Public landing and authentication wireframe
+
+- Added the proposed pre-login landing page and authentication flow wireframe (`P-002`).
+- Recorded the accepted redirect from successful sign-up/login to `/dashboard`.
+- Kept pricing, social proof, provider integrations, legal claims and dashboard design outside the approved wireframe scope.
+- No production website, authentication system or dashboard was implemented.
+
+## 2026-11-11 — Greenfield stack recommendation
+
+- Added the proposed TypeScript modular-monolith stack and decision gates (`P-003`).
+- Recommended Next.js, PostgreSQL/Drizzle and a separate Graphile Worker process; deferred Redis, a separate API service and microservices until measured triggers exist.
+- Kept auth vendor, hosting, region, RLS/pooler behavior and stock-locking design as explicit pre-scaffold gates.
+- No application was scaffolded and no provider or hosting account was changed.

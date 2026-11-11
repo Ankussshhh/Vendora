@@ -1,0 +1,369 @@
+<div id="vendora-public-wireframe" class="vw-root">
+  <style>
+    #vendora-public-wireframe {
+      --vw-bg: light-dark(#f7f7f5, #171716);
+      --vw-surface: light-dark(#ffffff, #222220);
+      --vw-surface-soft: light-dark(#eeeeea, #2c2c29);
+      --vw-text: light-dark(#20201e, #f1f1ed);
+      --vw-muted: light-dark(#676762, #b8b8b0);
+      --vw-line: light-dark(#c9c9c2, #4a4a45);
+      --vw-strong: light-dark(#292927, #f3f3ef);
+      --vw-strong-text: light-dark(#ffffff, #171716);
+      color: var(--vw-text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: grid;
+      gap: 28px;
+      width: 100%;
+    }
+    #vendora-public-wireframe * { box-sizing: border-box; }
+    #vendora-public-wireframe .vw-page {
+      background: var(--vw-bg);
+      border: 1px solid var(--vw-line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    #vendora-public-wireframe .vw-label {
+      color: var(--vw-muted);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    #vendora-public-wireframe .vw-browser {
+      align-items: center;
+      background: var(--vw-surface-soft);
+      border-bottom: 1px solid var(--vw-line);
+      display: flex;
+      gap: 8px;
+      min-height: 38px;
+      padding: 8px 14px;
+    }
+    #vendora-public-wireframe .vw-dot {
+      background: var(--vw-line);
+      border-radius: 999px;
+      height: 8px;
+      width: 8px;
+    }
+    #vendora-public-wireframe .vw-address {
+      background: var(--vw-surface);
+      border: 1px solid var(--vw-line);
+      border-radius: 999px;
+      color: var(--vw-muted);
+      font-size: 12px;
+      margin-left: 6px;
+      padding: 4px 12px;
+      width: min(360px, 58%);
+    }
+    #vendora-public-wireframe .vw-nav {
+      align-items: center;
+      background: var(--vw-surface);
+      border-bottom: 1px solid var(--vw-line);
+      display: flex;
+      justify-content: space-between;
+      padding: 16px clamp(18px, 4vw, 48px);
+    }
+    #vendora-public-wireframe .vw-brand { font-size: 19px; font-weight: 600; letter-spacing: -.03em; }
+    #vendora-public-wireframe .vw-nav-links, #vendora-public-wireframe .vw-nav-actions, #vendora-public-wireframe .vw-actions {
+      align-items: center;
+      display: flex;
+      gap: 14px;
+    }
+    #vendora-public-wireframe a { color: inherit; text-decoration: none; }
+    #vendora-public-wireframe .vw-link { color: var(--vw-muted); font-size: 13px; }
+    #vendora-public-wireframe .vw-button {
+      align-items: center;
+      background: transparent;
+      border: 1px solid var(--vw-line);
+      border-radius: 9px;
+      color: var(--vw-text);
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 600;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 16px;
+    }
+    #vendora-public-wireframe .vw-button-primary { background: var(--vw-strong); border-color: var(--vw-strong); color: var(--vw-strong-text); }
+    #vendora-public-wireframe .vw-hero {
+      display: grid;
+      gap: clamp(24px, 5vw, 58px);
+      grid-template-columns: minmax(0, .88fr) minmax(380px, 1.12fr);
+      padding: clamp(42px, 8vw, 92px) clamp(18px, 4vw, 48px);
+    }
+    #vendora-public-wireframe .vw-copy { align-self: center; display: grid; gap: 18px; }
+    #vendora-public-wireframe h1, #vendora-public-wireframe h2, #vendora-public-wireframe h3, #vendora-public-wireframe p { margin: 0; }
+    #vendora-public-wireframe h1 { font-size: clamp(36px, 5vw, 66px); font-weight: 600; letter-spacing: -.055em; line-height: .98; }
+    #vendora-public-wireframe h2 { font-size: clamp(27px, 3.5vw, 42px); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; }
+    #vendora-public-wireframe h3 { font-size: 18px; font-weight: 600; }
+    #vendora-public-wireframe .vw-lede { color: var(--vw-muted); font-size: 17px; line-height: 1.55; max-width: 560px; }
+    #vendora-public-wireframe .vw-micro { color: var(--vw-muted); font-size: 12px; line-height: 1.45; }
+    #vendora-public-wireframe .vw-preview {
+      background: var(--vw-surface);
+      border: 1px solid var(--vw-line);
+      border-radius: 14px;
+      min-width: 0;
+      overflow: hidden;
+    }
+    #vendora-public-wireframe .vw-preview-head {
+      align-items: center;
+      border-bottom: 1px solid var(--vw-line);
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 14px;
+    }
+    #vendora-public-wireframe .vw-chip {
+      background: var(--vw-surface-soft);
+      border: 1px solid var(--vw-line);
+      border-radius: 999px;
+      color: var(--vw-muted);
+      font-size: 11px;
+      padding: 5px 8px;
+    }
+    #vendora-public-wireframe .vw-workspace { display: grid; grid-template-columns: .86fr 1.14fr; min-height: 350px; }
+    #vendora-public-wireframe .vw-chat { border-right: 1px solid var(--vw-line); display: grid; gap: 12px; padding: 16px; }
+    #vendora-public-wireframe .vw-chat-row { display: grid; gap: 4px; }
+    #vendora-public-wireframe .vw-bubble {
+      background: var(--vw-surface-soft);
+      border-radius: 12px 12px 12px 3px;
+      color: var(--vw-text);
+      font-size: 12px;
+      line-height: 1.45;
+      padding: 10px;
+      width: 88%;
+    }
+    #vendora-public-wireframe .vw-bubble-out { border: 1px solid var(--vw-line); border-radius: 12px 12px 3px 12px; justify-self: end; background: var(--vw-surface); }
+    #vendora-public-wireframe .vw-order { display: grid; gap: 14px; padding: 16px; }
+    #vendora-public-wireframe .vw-customer { align-items: center; display: flex; gap: 10px; }
+    #vendora-public-wireframe .vw-avatar { background: var(--vw-surface-soft); border: 1px solid var(--vw-line); border-radius: 999px; height: 32px; width: 32px; }
+    #vendora-public-wireframe .vw-lines { display: grid; flex: 1; gap: 6px; }
+    #vendora-public-wireframe .vw-line { background: var(--vw-line); border-radius: 999px; height: 7px; }
+    #vendora-public-wireframe .vw-line-short { width: 48%; }
+    #vendora-public-wireframe .vw-item { border: 1px solid var(--vw-line); border-radius: 10px; display: grid; gap: 10px; padding: 12px; }
+    #vendora-public-wireframe .vw-item-top { display: flex; gap: 10px; }
+    #vendora-public-wireframe .vw-thumb { background: var(--vw-surface-soft); border: 1px solid var(--vw-line); border-radius: 8px; height: 56px; width: 48px; }
+    #vendora-public-wireframe .vw-stock { align-items: center; color: var(--vw-muted); display: flex; font-size: 12px; justify-content: space-between; }
+    #vendora-public-wireframe .vw-check { align-items: center; background: var(--vw-strong); border-radius: 999px; color: var(--vw-strong-text); display: inline-flex; height: 20px; justify-content: center; width: 20px; }
+    #vendora-public-wireframe .vw-section { padding: clamp(48px, 7vw, 86px) clamp(18px, 4vw, 48px); }
+    #vendora-public-wireframe .vw-section + .vw-section { border-top: 1px solid var(--vw-line); }
+    #vendora-public-wireframe .vw-section-head { display: grid; gap: 10px; max-width: 680px; }
+    #vendora-public-wireframe .vw-flow { display: grid; gap: 12px; grid-template-columns: repeat(4, 1fr); margin-top: 32px; }
+    #vendora-public-wireframe .vw-step { border-top: 2px solid var(--vw-strong); display: grid; gap: 12px; padding-top: 14px; }
+    #vendora-public-wireframe .vw-step-num { color: var(--vw-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+    #vendora-public-wireframe .vw-step p, #vendora-public-wireframe .vw-feature p { color: var(--vw-muted); font-size: 13px; line-height: 1.5; }
+    #vendora-public-wireframe .vw-features { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; margin-top: 30px; }
+    #vendora-public-wireframe .vw-feature { background: var(--vw-surface); border: 1px solid var(--vw-line); border-radius: 12px; display: grid; gap: 10px; min-height: 170px; padding: 22px; }
+    #vendora-public-wireframe .vw-planned { color: var(--vw-muted); font-size: 11px; text-transform: uppercase; }
+    #vendora-public-wireframe .vw-principles { display: grid; gap: 1px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; background: var(--vw-line); border: 1px solid var(--vw-line); }
+    #vendora-public-wireframe .vw-principle { background: var(--vw-surface); display: grid; gap: 6px; padding: 20px; }
+    #vendora-public-wireframe .vw-audience { align-items: center; display: grid; gap: 30px; grid-template-columns: 1fr 1fr; }
+    #vendora-public-wireframe .vw-audience-list { display: grid; gap: 8px; }
+    #vendora-public-wireframe .vw-audience-row { border-bottom: 1px solid var(--vw-line); color: var(--vw-muted); display: flex; gap: 10px; padding: 11px 0; }
+    #vendora-public-wireframe .vw-final { align-items: center; background: var(--vw-strong); color: var(--vw-strong-text); display: grid; gap: 22px; grid-template-columns: 1fr auto; padding: clamp(42px, 7vw, 72px) clamp(18px, 4vw, 48px); }
+    #vendora-public-wireframe .vw-final p { color: color-mix(in srgb, var(--vw-strong-text) 72%, transparent); margin-top: 8px; }
+    #vendora-public-wireframe .vw-final .vw-button { background: var(--vw-strong-text); border-color: var(--vw-strong-text); color: var(--vw-strong); }
+    #vendora-public-wireframe .vw-footer { align-items: center; background: var(--vw-surface); color: var(--vw-muted); display: flex; font-size: 12px; justify-content: space-between; padding: 22px clamp(18px, 4vw, 48px); }
+    #vendora-public-wireframe .vw-flow-title { display: grid; gap: 8px; }
+    #vendora-public-wireframe .vw-auth-flow { align-items: stretch; display: grid; gap: 14px; grid-template-columns: 1fr 34px 1fr 34px 1fr 34px .72fr; }
+    #vendora-public-wireframe .vw-arrow { align-items: center; color: var(--vw-muted); display: flex; justify-content: center; }
+    #vendora-public-wireframe .vw-screen { background: var(--vw-surface); border: 1px solid var(--vw-line); border-radius: 12px; display: grid; grid-template-rows: auto 1fr; min-height: 330px; overflow: hidden; }
+    #vendora-public-wireframe .vw-screen-bar { background: var(--vw-surface-soft); border-bottom: 1px solid var(--vw-line); color: var(--vw-muted); font-size: 11px; padding: 8px 10px; }
+    #vendora-public-wireframe .vw-form { align-content: center; display: grid; gap: 12px; padding: 18px; }
+    #vendora-public-wireframe .vw-form h3 { font-size: 17px; }
+    #vendora-public-wireframe .vw-field { display: grid; gap: 5px; }
+    #vendora-public-wireframe .vw-field span { color: var(--vw-muted); font-size: 11px; }
+    #vendora-public-wireframe .vw-input { border: 1px solid var(--vw-line); border-radius: 7px; height: 34px; }
+    #vendora-public-wireframe .vw-form-button { background: var(--vw-strong); border-radius: 7px; color: var(--vw-strong-text); font-size: 12px; padding: 10px; text-align: center; }
+    #vendora-public-wireframe .vw-destination { align-content: center; display: grid; gap: 12px; justify-items: center; padding: 18px; text-align: center; }
+    #vendora-public-wireframe .vw-dashboard-mark { border: 1px solid var(--vw-line); display: grid; gap: 4px; grid-template-columns: 30% 70%; height: 84px; padding: 8px; width: 120px; }
+    #vendora-public-wireframe .vw-dashboard-mark > span { background: var(--vw-surface-soft); }
+    #vendora-public-wireframe .vw-route-note { color: var(--vw-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+    @media (max-width: 820px) {
+      #vendora-public-wireframe .vw-hero { grid-template-columns: 1fr; }
+      #vendora-public-wireframe .vw-preview { max-width: 620px; }
+      #vendora-public-wireframe .vw-auth-flow { grid-template-columns: 1fr 24px 1fr; }
+      #vendora-public-wireframe .vw-auth-flow .vw-arrow:nth-of-type(2),
+      #vendora-public-wireframe .vw-auth-flow .vw-arrow:nth-of-type(3) { display: none; }
+      #vendora-public-wireframe .vw-destination-screen { grid-column: 1 / -1; min-height: 190px; }
+    }
+    @media (max-width: 620px) {
+      #vendora-public-wireframe .vw-nav-links { display: none; }
+      #vendora-public-wireframe .vw-nav { align-items: flex-start; gap: 12px; }
+      #vendora-public-wireframe .vw-nav-actions { gap: 7px; }
+      #vendora-public-wireframe .vw-nav-actions .vw-link { display: none; }
+      #vendora-public-wireframe .vw-actions { align-items: stretch; flex-direction: column; }
+      #vendora-public-wireframe .vw-button { width: 100%; }
+      #vendora-public-wireframe .vw-workspace { grid-template-columns: 1fr; }
+      #vendora-public-wireframe .vw-chat { border-bottom: 1px solid var(--vw-line); border-right: 0; min-height: 230px; }
+      #vendora-public-wireframe .vw-flow, #vendora-public-wireframe .vw-features, #vendora-public-wireframe .vw-principles, #vendora-public-wireframe .vw-audience { grid-template-columns: 1fr; }
+      #vendora-public-wireframe .vw-final { grid-template-columns: 1fr; }
+      #vendora-public-wireframe .vw-footer { align-items: flex-start; flex-direction: column; gap: 10px; }
+      #vendora-public-wireframe .vw-auth-flow { grid-template-columns: 1fr; }
+      #vendora-public-wireframe .vw-arrow { min-height: 26px; transform: rotate(90deg); }
+      #vendora-public-wireframe .vw-auth-flow .vw-arrow:nth-of-type(2),
+      #vendora-public-wireframe .vw-auth-flow .vw-arrow:nth-of-type(3) { display: flex; }
+      #vendora-public-wireframe .vw-destination-screen { grid-column: auto; }
+    }
+  </style>
+
+  <section class="vw-page" aria-label="Vendora proposed landing page wireframe">
+    <div class="vw-browser" aria-hidden="true">
+      <span class="vw-dot"></span><span class="vw-dot"></span><span class="vw-dot"></span>
+      <span class="vw-address">vendora.example /</span>
+    </div>
+    <header class="vw-nav">
+      <span class="vw-brand">Vendora</span>
+      <nav class="vw-nav-links" aria-label="Public navigation">
+        <a class="vw-link" href="#vw-workflow">How it works</a>
+        <a class="vw-link" href="#vw-principles">Principles</a>
+        <a class="vw-link" href="#vw-audience">Who it’s for</a>
+      </nav>
+      <div class="vw-nav-actions">
+        <a class="vw-link" href="#vw-auth">Log in</a>
+        <a class="vw-button vw-button-primary" href="#vw-auth">Create account</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="vw-hero">
+        <div class="vw-copy">
+          <span class="vw-label">For social sellers and small teams</span>
+          <h1>Turn every customer conversation into a trackable order.</h1>
+          <p class="vw-lede">Keep customer context, product variants, stock and order progress together—from the first message to fulfilment.</p>
+          <div class="vw-actions">
+            <a class="vw-button vw-button-primary" href="#vw-auth">Create account</a>
+            <a class="vw-button" href="#vw-workflow">See how it works</a>
+          </div>
+          <p class="vw-micro">Proposed product direction · Working name · No pricing or launch claims</p>
+        </div>
+
+        <div class="vw-preview" aria-label="Illustrative merchant workspace using sample data">
+          <div class="vw-preview-head">
+            <strong>Merchant workspace</strong>
+            <span class="vw-chip">Illustrative concept · Sample data</span>
+          </div>
+          <div class="vw-workspace">
+            <div class="vw-chat">
+              <div class="vw-chat-row">
+                <span class="vw-label">Conversation</span>
+                <div class="vw-bubble">Do you have the linen shirt in blue, size M?</div>
+              </div>
+              <div class="vw-bubble vw-bubble-out">Checking the correct variant and stock…</div>
+              <div class="vw-bubble">Yes—please make one order for me.</div>
+            </div>
+            <div class="vw-order">
+              <div class="vw-customer">
+                <span class="vw-avatar" aria-hidden="true"></span>
+                <div class="vw-lines"><span class="vw-line"></span><span class="vw-line vw-line-short"></span></div>
+              </div>
+              <div class="vw-item">
+                <div class="vw-item-top">
+                  <span class="vw-thumb" aria-hidden="true"></span>
+                  <div class="vw-lines"><span class="vw-line"></span><span class="vw-line"></span><span class="vw-line vw-line-short"></span></div>
+                </div>
+                <div class="vw-stock"><span>Blue · M · Qty 1</span><span>Stock checked</span></div>
+              </div>
+              <div class="vw-stock"><span>Draft order created</span><span class="vw-check" aria-hidden="true">✓</span></div>
+              <div class="vw-form-button">Review and confirm order</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vw-workflow" class="vw-section">
+        <div class="vw-section-head">
+          <span class="vw-label">One connected workflow</span>
+          <h2>From first message to fulfilment handoff.</h2>
+          <p class="vw-lede">The conversation starts the work. Customer context, stock and order state stay connected as the team moves it forward.</p>
+        </div>
+        <div class="vw-flow">
+          <article class="vw-step"><span class="vw-step-num">01</span><h3>Receive the request</h3><p>Bring the buyer message into one merchant workflow.</p></article>
+          <article class="vw-step"><span class="vw-step-num">02</span><h3>Check the right item</h3><p>Match the product, variant, quantity and current stock.</p></article>
+          <article class="vw-step"><span class="vw-step-num">03</span><h3>Track the order</h3><p>Keep customer and order history together for the team.</p></article>
+          <article class="vw-step"><span class="vw-step-num">04</span><h3>Hand off clearly</h3><p>Move confirmed work into packing and fulfilment without losing context.</p></article>
+        </div>
+      </section>
+
+      <section class="vw-section">
+        <div class="vw-section-head"><span class="vw-label">Core operating context</span><h2>Less switching. Fewer missing details.</h2></div>
+        <div class="vw-features">
+          <article class="vw-feature"><h3>Customer history beside the conversation</h3><p>Notes, previous orders and follow-ups stay readable when a buyer returns.</p><span class="vw-planned">Proposed capability</span></article>
+          <article class="vw-feature"><h3>Variants, stock and order state in one flow</h3><p>The team sees the exact item and current next step instead of reconstructing it from chat.</p><span class="vw-planned">Proposed capability</span></article>
+          <article class="vw-feature"><h3>AI that drafts—not decides</h3><p>Assistance can suggest replies or actions, while deterministic services and the merchant control facts and changes.</p><span class="vw-planned">Planned</span></article>
+          <article class="vw-feature"><h3>Update stock by speaking</h3><p>Voice can become an editable stock draft; the owner reviews Add versus Set and confirms before inventory changes.</p><span class="vw-planned">Planned</span></article>
+        </div>
+      </section>
+
+      <section id="vw-principles" class="vw-section">
+        <div class="vw-section-head"><span class="vw-label">Product principles</span><h2>Human control stays visible.</h2></div>
+        <div class="vw-principles">
+          <article class="vw-principle"><h3>Take over anytime</h3><p class="vw-micro">A team member can take control of a conversation.</p></article>
+          <article class="vw-principle"><h3>Confirm important changes</h3><p class="vw-micro">Stock and other consequential actions require review.</p></article>
+          <article class="vw-principle"><h3>Separate business workspaces</h3><p class="vw-micro">Roles and merchant context guide what staff can access.</p></article>
+        </div>
+      </section>
+
+      <section id="vw-audience" class="vw-section vw-audience">
+        <div class="vw-section-head"><span class="vw-label">Who it’s for</span><h2>Built around the daily work of social sellers.</h2><p class="vw-lede">The first product direction focuses on owners and small teams managing conversations, products, stock and orders together.</p></div>
+        <div class="vw-audience-list">
+          <div class="vw-audience-row"><span>✓</span><span>Owner-operated online stores</span></div>
+          <div class="vw-audience-row"><span>✓</span><span>Small sales and fulfilment teams</span></div>
+          <div class="vw-audience-row"><span>✓</span><span>Variant-heavy catalogs and repeat buyers</span></div>
+          <div class="vw-audience-row"><span>—</span><span>Not a public multi-seller marketplace</span></div>
+        </div>
+      </section>
+
+      <section class="vw-final">
+        <div><h2>Bring conversations, customers and orders into one workspace.</h2><p>After account creation or login, the merchant enters their dashboard.</p></div>
+        <div class="vw-actions"><a class="vw-button" href="#vw-auth">Create account</a><a class="vw-button" href="#vw-auth">Log in</a></div>
+      </section>
+    </main>
+
+    <footer class="vw-footer"><span>Vendora · Working name</span><span>Privacy and terms · Pending review</span></footer>
+  </section>
+
+  <section id="vw-auth" class="vw-flow-title" aria-labelledby="vw-auth-heading">
+    <span class="vw-label">Pre-login screen flow</span>
+    <h2 id="vw-auth-heading">Landing → authentication → dashboard redirect</h2>
+    <p class="vw-lede">These are low-fidelity route states. The dashboard is shown only as the post-authentication destination.</p>
+  </section>
+
+  <section class="vw-auth-flow" aria-label="Authentication screen flow">
+    <article class="vw-screen">
+      <div class="vw-screen-bar">/signup</div>
+      <div class="vw-form">
+        <span class="vw-label">Create account</span><h3>Start your merchant workspace</h3>
+        <label class="vw-field"><span>Full name</span><span class="vw-input"></span></label>
+        <label class="vw-field"><span>Work email</span><span class="vw-input"></span></label>
+        <label class="vw-field"><span>Password</span><span class="vw-input"></span></label>
+        <div class="vw-form-button">Create account</div><p class="vw-micro">Already have an account? Log in</p>
+      </div>
+    </article>
+    <div class="vw-arrow" aria-hidden="true">→</div>
+    <article class="vw-screen">
+      <div class="vw-screen-bar">/login</div>
+      <div class="vw-form">
+        <span class="vw-label">Welcome back</span><h3>Log in to Vendora</h3>
+        <label class="vw-field"><span>Email</span><span class="vw-input"></span></label>
+        <label class="vw-field"><span>Password</span><span class="vw-input"></span></label>
+        <p class="vw-micro">Forgot password?</p><div class="vw-form-button">Log in</div><p class="vw-micro">New to Vendora? Create account</p>
+      </div>
+    </article>
+    <div class="vw-arrow" aria-hidden="true">→</div>
+    <article class="vw-screen">
+      <div class="vw-screen-bar">/forgot-password</div>
+      <div class="vw-form">
+        <span class="vw-label">Account recovery</span><h3>Reset your password</h3>
+        <p class="vw-micro">Enter your email. If an account exists, reset instructions will be sent.</p>
+        <label class="vw-field"><span>Email</span><span class="vw-input"></span></label>
+        <div class="vw-form-button">Send instructions</div><p class="vw-micro">Return to log in</p>
+      </div>
+    </article>
+    <div class="vw-arrow" aria-hidden="true">→</div>
+    <article class="vw-screen vw-destination-screen">
+      <div class="vw-screen-bar">Success destination</div>
+      <div class="vw-destination">
+        <div class="vw-dashboard-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h3>Merchant dashboard</h3><span class="vw-route-note">/dashboard</span><p class="vw-micro">Designed separately after this public flow is approved.</p>
+      </div>
+    </article>
+  </section>
+</div>

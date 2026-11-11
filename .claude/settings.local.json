@@ -3,7 +3,19 @@
     "allow": [
       "Bash(codex exec *)",
       "Bash(codex login *)",
-      "Bash(codex features *)"
+      "Bash(codex features *)",
+      "Bash(git config *)",
+      "Bash(gh auth *)",
+      "Bash(git ls-remote *)",
+      "Bash(grep -rIlE \"\\(sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN \\(RSA|OPENSSH|PRIVATE\\) KEY|password\\\\s*=\\)\" .)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git restore *)",
+      "Bash(git push *)",
+      "Read(//Users/ankush/.ssh/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://api.github.com/repos/Ankussshhh/Vendora)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://api.github.com/users/Ankussshhh)"
     ]
   }
 }

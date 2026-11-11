@@ -1,6 +1,6 @@
 # Proposed architecture
 
-No stack is selected. Inspect the existing Zappcarts repository before choosing implementation details. Preserve a suitable working stack. If starting fresh, a TypeScript web app/API with PostgreSQL and a background job queue is a reasonable proposal; this is not an instruction to migrate.
+No stack is accepted yet. Inspect the existing Zappcarts repository before choosing implementation details and preserve a suitable working stack. If the application is greenfield, `docs/14_TECH_STACK_PROPOSAL.md` recommends a TypeScript modular monolith using Next.js, PostgreSQL, Drizzle and a separate Graphile Worker process. That proposal is not an instruction to migrate or scaffold without approval.
 
 ## Logical components
 

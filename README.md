@@ -30,7 +30,9 @@ The Golden Collaboration Rule is recorded in `shared/WORKLOG.md`: every prompt g
 10. `docs/06_ARCHITECTURE.md`, `07_DATA_MODEL.md`, `08_API_AND_EVENTS.md` — proposed implementation contracts.
 11. `docs/09_SECURITY_AND_INTEGRATIONS.md`, `10_ACCEPTANCE_AND_TESTING.md` — release requirements.
 12. `docs/11_ROADMAP.md`, `12_OPEN_DECISIONS.md` — scope and unknowns.
-13. `research/2026-11-11_Zappcarts_Market_Research.md` — dated background, sources and limitations.
+13. `docs/13_PUBLIC_SITE_WIREFRAME.md` — proposed public landing/authentication experience.
+14. `docs/14_TECH_STACK_PROPOSAL.md` — recommended greenfield stack, boundaries and decision gates.
+15. `research/2026-11-11_Zappcarts_Market_Research.md` — dated background, sources and limitations.
 
 ## Shared working files
 

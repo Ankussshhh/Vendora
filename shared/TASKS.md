@@ -10,5 +10,7 @@
 | T006 | Independent pre-kickoff gap review | Codex + Claude consultation | Done | KICKOFF.md review record |
 | T007 | Approve or correct Milestone 1 kickoff contract | Ankush | Pending | KICKOFF.md gates K0.1–K0.6 |
 | T008 | Adopt shared Golden Collaboration Rule | Codex + Claude consultation | Done | `shared/WORKLOG.md` P-001 |
+| T009 | Create public landing/auth wireframe | Codex + Claude consultation | Done | `docs/13_PUBLIC_SITE_WIREFRAME.md`, visual companion, `shared/WORKLOG.md` P-002 |
+| T010 | Recommend greenfield technology stack | Codex + Claude consultation | Done | `docs/14_TECH_STACK_PROPOSAL.md`, `shared/WORKLOG.md` P-003 |
 
 Each coding task needs: scope, requirements IDs, acceptance criteria, owner, status, dependency, changed files and verification evidence. Every prompt must follow `shared/WORKLOG.md`; coding is Done only after Claude records implementation and Codex records its actual diff review.

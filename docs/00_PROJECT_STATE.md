@@ -17,6 +17,8 @@ Updated: 11 November 2026.
 - Prepared dated desk research and assumption-based pricing/unit economics.
 - Created this shared documentation pack.
 - Completed an independent Claude gap review and added `KICKOFF.md` as the proposed Milestone 1 contract.
+- Created the proposed public landing/authentication wireframe and recorded the post-authentication `/dashboard` redirect.
+- Added a greenfield technology-stack recommendation with explicit auth, hosting, tenancy and concurrency gates.
 
 ## Not completed
 
@@ -26,7 +28,7 @@ Updated: 11 November 2026.
 
 ## Next action
 
-Ankush reviews or corrects `KICKOFF.md`, identifies the actual source repository, and explicitly authorizes the first milestone. Upon that instruction, inspect the repository before choosing implementation details. Do not treat this proposal or the whole roadmap as coding authorization.
+Ankush reviews or corrects `docs/13_PUBLIC_SITE_WIREFRAME.md` and `docs/14_TECH_STACK_PROPOSAL.md`. Application implementation still requires confirmation that no existing source must be preserved, acceptance of the initial stack/gates and explicit authorization. Do not treat a wireframe, proposal or the whole roadmap as coding authorization.
 
 ## Source of truth
 

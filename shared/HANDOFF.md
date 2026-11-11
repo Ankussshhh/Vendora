@@ -8,7 +8,7 @@ Keep the Vendora concept, requirements, implementation evidence and review synch
 
 ## Current state
 
-Documentation prepared only. The Golden Collaboration Rule is now canonical in `shared/WORKLOG.md`: every prompt is logged there, Claude records implementation, Codex reviews the actual diff and log claims, and either repairs a missed or unsupported record. `KICKOFF.md` proposes a bounded mock chat-to-reserved-order Milestone 1. No code, provider account, production configuration or database has been modified.
+Documentation and wireframes prepared only. The Golden Collaboration Rule is canonical in `shared/WORKLOG.md`. `docs/13_PUBLIC_SITE_WIREFRAME.md` proposes the pre-login experience. `docs/14_TECH_STACK_PROPOSAL.md` recommends a greenfield TypeScript modular monolith with Next.js, PostgreSQL/Drizzle and Graphile Worker, while auth/hosting/region remain gates. `KICKOFF.md` proposes a bounded mock chat-to-reserved-order Milestone 1. No application was scaffolded and no provider, production configuration or database was changed.
 
 ## Read next
 

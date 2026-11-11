@@ -5,7 +5,7 @@ Only ask when a decision materially blocks the requested task. Continue independ
 | ID | Decision | Current state / proposal | Needed before |
 |---|---|---|---|
 | O01 | Existing repository/source access | Unknown; inspect rather than rebuild | Coding |
-| O02 | Stack and hosting | Unselected; preserve suitable existing stack | Foundation implementation |
+| O02 | Stack and hosting | Greenfield recommendation documented in `docs/14_TECH_STACK_PROPOSAL.md`; existing source, auth provider, host and region still require approval | Foundation implementation |
 | O03 | Brand domain/trademark | Vendora working name; no clearance or registration | Public rename/spend |
 | O04 | Initial seller category/geography | India apparel/accessories pilot proposed; global brand | Pilot sales targeting |
 | O05 | WhatsApp direct API/BSP | Unknown; compare contract and onboarding effort | Live messaging |
