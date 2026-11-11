@@ -2,5 +2,13 @@
 __pycache__/
 *.pyc
 .claude/settings.local.json
+.claude/skills/
+.claude-*-packet.md
+.taste-skill/
+skills-lock.json
 .env
 .env.*
+node_modules/
+.next/
+*.tsbuildinfo
+apps/web/public/hero-commerce-signal.png

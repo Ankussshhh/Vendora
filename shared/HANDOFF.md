@@ -8,7 +8,7 @@ Keep the Vendora concept, requirements, implementation evidence and review synch
 
 ## Current state
 
-Documentation and wireframes prepared only. The Golden Collaboration Rule is canonical in `shared/WORKLOG.md`. `docs/13_PUBLIC_SITE_WIREFRAME.md` proposes the pre-login experience. `docs/14_TECH_STACK_PROPOSAL.md` recommends a greenfield TypeScript modular monolith with Next.js, PostgreSQL/Drizzle and Graphile Worker, while auth/hosting/region remain gates. `KICKOFF.md` proposes a bounded mock chat-to-reserved-order Milestone 1. No application was scaffolded and no provider, production configuration or database was changed.
+The public Next.js web app is scaffolded and its pre-login landing page is implemented. The Golden Collaboration Rule is canonical in `shared/WORKLOG.md`. After P-009, the page keeps the warm editorial paper/ink/vermilion identity but is motion-first: an order sheet expands into a complete workspace, a code-native textile visual zooms into view, and a four-stage order story runs as one continuous native-scroll sequence. Landing code is organized under `apps/web/app/components/landing/` and uses Tailwind v4 utilities. Authentication, dashboard, providers, production configuration, and database work have not started.
 
 ## Read next
 
@@ -16,7 +16,7 @@ README → shared/WORKLOG.md → KICKOFF.md → CLAUDE.md → docs/00_PROJECT_ST
 
 ## Next authorized action
 
-Wait for Ankush to approve/correct the kickoff contract, identify the source repository and explicitly authorize implementation. When asked to code, inspect the real repository and report the relevant baseline before changing architecture. Do not build the entire roadmap automatically.
+Hand-scroll and keyboard-test the public landing page when Computer Use is available, especially the 240svh workspace transformation, 220svh workflow sequence, frame rate, and focus order. After Ankush approves the new visual direction, move to login/signup; do not start authentication or dashboard work without his prompt.
 
 ## Review priorities for ChatGPT/Codex
 
@@ -24,4 +24,4 @@ Tenant isolation; stock/payment correctness; idempotency; credit reservations/se
 
 ## Outstanding blockers
 
-No application repository or provider configuration supplied. Stack, reservation timing/TTL, Milestone 1 permissions, prices and providers remain open. The current workspace is `/Users/ankush/Desktop/Vendora`; the previous Desktop-write warning is historical and no longer applies to this copy.
+Browser-driven QA is currently unavailable because the Computer Use browser host returns unavailable, although the local server responds and production build passes. Auth provider, hosting, region, reservation timing/TTL, prices and production providers remain open.

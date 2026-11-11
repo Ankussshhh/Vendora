@@ -34,3 +34,26 @@
 - Recommended Next.js, PostgreSQL/Drizzle and a separate Graphile Worker process; deferred Redis, a separate API service and microservices until measured triggers exist.
 - Kept auth vendor, hosting, region, RLS/pooler behavior and stock-locking design as explicit pre-scaffold gates.
 - No application was scaffolded and no provider or hosting account was changed.
+
+## 2026-11-11 — Animated public landing page
+
+- Scaffolded the Next.js public web app and replaced the basic landing draft with a responsive, dark premium SaaS presentation (`P-004`, finalized in `P-007`).
+- Added scroll-linked Motion effects, a sticky four-stage workflow, floating sample product surfaces, reduced-motion handling, and generated hero artwork.
+- Kept authentication and the dashboard outside scope; login and create-account links point to an honest early-access status section.
+- TypeScript and the optimized production build pass. Browser-driven visual QA remains unavailable because the local browser-control host is unavailable.
+
+## 2026-11-11 — Editorial homepage polish
+
+- Installed Taste, Emil Kowalski's `improve-animations`, and Impeccable into the project-local Claude skill set (`P-008`).
+- Rebuilt the landing page away from neon, glass, floating chips, orbit artwork, and generic dashboard-card patterns toward a warm paper-and-ink editorial commerce identity.
+- Reduced motion to one purposeful workflow sequence plus finite entrance and interaction feedback; preserved reduced-motion and static fallbacks.
+- Added a concrete, visibly illustrative order record and simplified the narrative to message → variant/stock → human-reviewed draft → fulfilment.
+- Typecheck, production build, diff checks, and desktop/mobile headless-Chrome captures pass review. Direct interactive Computer Use QA remains unavailable.
+
+## 2026-11-11 — Motion-first Tailwind landing architecture
+
+- Kept the appropriate pnpm monorepo and reorganized the landing feature into `apps/web/app/components/landing/`, with copy/sample data separated from presentation and motion.
+- Converted layout, responsive states, typography, colour, borders, and interactions to Tailwind v4 utilities; reduced global CSS to theme/base tokens, entrance keyframes, and the custom textile visual.
+- Added a 240svh message-to-workspace transformation scene, a zooming textile/variant scene, and a 220svh continuous four-stage workflow sequence using native scroll and Motion transforms.
+- Preserved static, mobile, no-JS, and reduced-motion presentations; kept the warm paper/ink/vermilion Vendora identity without neon, glass, fake metrics, or generated orbit art.
+- Ignored project-local Claude skills, skill lock state, Taste diagnostics, temporary Claude packets, and the unused generated hero PNG so they do not enter product commits.
